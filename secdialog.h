@@ -15,6 +15,9 @@ public:
     explicit SecDialog(QWidget *parent = 0);
     ~SecDialog();
 
+protected:
+    virtual void closeEvent(QCloseEvent * event);
+
 private:
     Ui::SecDialog *ui;
 };

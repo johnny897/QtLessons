@@ -1,5 +1,7 @@
 #include "secdialog.h"
 #include "ui_secdialog.h"
+#include <QMainWindow>
+#include <QCloseEvent>
 
 SecDialog::SecDialog(QWidget *parent) :
     QDialog(parent),
@@ -11,4 +13,10 @@ SecDialog::SecDialog(QWidget *parent) :
 SecDialog::~SecDialog()
 {
     delete ui;
+}
+
+void SecDialog::closeEvent(QCloseEvent * event) {
+    QMainWindow* pMainWnd = (QMainWindow*)parent();
+    pMainWnd->show();
+    event->accept();
 }

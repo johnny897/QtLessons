@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <secdialog.h>
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +21,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui; // main window resource
+    SecDialog* pSecDialog;
 };
 
 #endif // MAINWINDOW_H
