@@ -1,4 +1,6 @@
-QtLesson10/Lesson10.pro.user
-QtLesson11/Lesson11.pro.user
+*.pro.user
+*.ui.autosave
 
 build-Lesson11-Desktop-Debug/
+build-Lesson11 (QStatusBar)-Desktop-Debug/
+
