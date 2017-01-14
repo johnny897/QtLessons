@@ -9,8 +9,11 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap pix(":/images/screen.png");
-    ui->label_pic->setPixmap(pix);
+//    QPixmap pix(":/images/screen.png");
+//    ui->label_pic->setPixmap(pix);
+
+    ui->statusBar->addPermanentWidget(ui->label_status, 1);
+    ui->statusBar->addPermanentWidget(ui->progressBar, 5);
 
     pSecDialog = new SecDialog(this);
 }
@@ -25,10 +28,10 @@ void MainWindow::on_pushButton_clicked()
     if(ui->login->text() == "test" && ui->password->text() == "test") {
  //       QMessageBox::information(this, "Password confirmed", "Your password is proper");
  //       pSecDialog->show();
-        ui->statusBar->showMessage("Your password is right!!!");
+        ui->statusBar->showMessage("Your password is right!!!", 5000);
     }
     else {
 //        QMessageBox::warning(this, "Wrong password", "Your password is wrong!!!");
-        ui->statusBar->showMessage("Your password is wrong!!!");
+        ui->statusBar->showMessage("Your password is wrong!!!", 5000);
     }
 }
