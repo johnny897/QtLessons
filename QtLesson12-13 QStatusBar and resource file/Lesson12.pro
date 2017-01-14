@@ -22,6 +22,8 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui \
     secdialog.ui
 
-OTHER_FILES +=
+OTHER_FILES += \
+    display.png
 
-RESOURCES +=
+RESOURCES += \
+    resource.qrc
