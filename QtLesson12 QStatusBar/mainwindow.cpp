@@ -23,10 +23,12 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     if(ui->login->text() == "test" && ui->password->text() == "test") {
-        QMessageBox::information(this, "Password confirmed", "Your password is proper");
-        pSecDialog->show();
+ //       QMessageBox::information(this, "Password confirmed", "Your password is proper");
+ //       pSecDialog->show();
+        ui->statusBar->showMessage("Your password is right!!!");
     }
     else {
-        QMessageBox::warning(this, "Wrong password", "Your password is wrong!!!");
+//        QMessageBox::warning(this, "Wrong password", "Your password is wrong!!!");
+        ui->statusBar->showMessage("Your password is wrong!!!");
     }
 }
